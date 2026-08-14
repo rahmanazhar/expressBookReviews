@@ -1,0 +1,10 @@
+curl -X POST -H "Content-Type: application/json" -d '{"username":"rahmanazhar","password":"test123"}' http://localhost:5000/register
+{"message":"User successfully registered. Now you can login"}
+
+# Registering the same username again:
+curl -X POST -H "Content-Type: application/json" -d '{"username":"rahmanazhar","password":"test123"}' http://localhost:5000/register
+{"message":"User already exists!"}
+
+# Registering without a password:
+curl -X POST -H "Content-Type: application/json" -d '{"username":"nopassword"}' http://localhost:5000/register
+{"message":"Unable to register user. Username and password are required."}

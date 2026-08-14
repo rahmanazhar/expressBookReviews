@@ -1,0 +1,8 @@
+curl -X PUT -b cookies.txt "http://localhost:5000/customer/auth/review/1?review=Great%20book!"
+{"message":"The review for the book with ISBN 1 has been added/updated"}
+
+# The review is now visible on the public review endpoint:
+curl http://localhost:5000/review/1
+{
+    "rahmanazhar": "Great book!"
+}

@@ -1,0 +1,6 @@
+curl -X DELETE -b cookies.txt http://localhost:5000/customer/auth/review/1
+{"message":"Review by rahmanazhar for ISBN 1 deleted"}
+
+# The review is gone from the public review endpoint:
+curl http://localhost:5000/review/1
+{}
